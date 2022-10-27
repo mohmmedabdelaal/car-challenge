@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  background: hsl(233, 47%, 7%);
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* ----------------  */
+
+.container {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.content {
+  background-color: hsl(244, 38%, 16%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 17px;
+  overflow: hidden;
+  margin: 2rem;
+}
+
+.text-content {
+  padding: 10%;
+}
+
+.title {
+  color: #fff;
+  padding-bottom: 2rem;
+}
+
+.title span {
+  color: #5837d0;
+}
+
+.subtitle {
+  color: #fff;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.img-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.img-container {
+  position: relative;
+}
+
+.img-container::after {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: hsla(277, 64%, 61%, 0.6);
+}
+
+.testimony {
+  display: flex;
+  justify-content: space-around;
+  text-transform: uppercase;
+  padding-top: 5rem;
+}
+
+.testimony p.num {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.testimony p {
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+@media only screen and (min-width: 768px) and (min-width: 425px) {
+  body {
+    font-size: 1rem;
+  }
+  .text-content {
+    padding: 11%;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .stat-box p.num {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  body {
+    text-align: center;
+  }
+  .content {
+    grid-template-columns: 1fr;
+  }
+  .img-container {
+    order: -1;
+  }
+  .text-content {
+    padding: 12% 8%;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  .testimony {
+    flex-direction: column;
+    padding-top: 2rem;
+  }
+  .testimony div {
+    margin-top: 1.3rem;
+  }
+}
